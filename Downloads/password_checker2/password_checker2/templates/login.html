@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | AI Password Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Enter Your Password</h2>
+    <form method="POST" onsubmit="return validateBeforeSubmit()">
+        <input type="password" name="password" id="password" placeholder="Enter password" required oninput="checkPasswordStrength(this.value)">
+        <div id="strength-meter"></div>
+        <ul id="suggestions-list"></ul>
+        <button type="submit">Check Strength</button>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <br>
+    <a href="{{ url_for('routes.index') }}">← Back to Home</a>
+    <br><br>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

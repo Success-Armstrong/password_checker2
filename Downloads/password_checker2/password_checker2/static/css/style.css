@@ -1,0 +1,66 @@
+body {
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.flash.danger { color: red; }
+.flash.warning { color: orange; }
+.flash.success { color: green; }
+
+#strength-meter {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#suggestions-list {
+    list-style: disc;
+    text-align: left;
+    padding-left: 40px;
+    color: #444;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark input,
+body.dark button {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark .container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}

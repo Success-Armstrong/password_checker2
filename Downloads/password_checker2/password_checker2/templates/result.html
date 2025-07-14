@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Password Strength: {{ status.capitalize() }}</h2>
+
+    {% if status == 'strong' %}
+        <p>✅ Great! You’ve chosen a strong password.</p>
+    {% elif status == 'medium' %}
+        <p>⚠️ Your password is okay, but could be better.</p>
+    {% else %}
+        <p>❌ Weak password — please try again.</p>
+    {% endif %}
+
+    <a href="{{ url_for('routes.login') }}"><button>Try Another Password</button></a>
+    <br><br>
+    <a href="{{ url_for('routes.index') }}">← Back to Home</a>
+    <br><br>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

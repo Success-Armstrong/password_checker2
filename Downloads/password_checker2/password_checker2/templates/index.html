@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | Password Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to the AI Password Strength Checker</h2>
+        <a href="{{ url_for('routes.login') }}"><button>Check a Password</button></a>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
